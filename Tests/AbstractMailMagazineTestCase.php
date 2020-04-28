@@ -13,10 +13,10 @@
 
 namespace Plugin\MailMagazine4\Tests;
 
-use Eccube\Tests\Service\AbstractServiceTestCase;
-use Plugin\MailMagazine4\Service\MailMagazineService;
-use Plugin\MailMagazine4\Repository\MailMagazineSendHistoryRepository;
 use Eccube\Entity\Customer;
+use Eccube\Tests\Service\AbstractServiceTestCase;
+use Plugin\MailMagazine4\Repository\MailMagazineSendHistoryRepository;
+use Plugin\MailMagazine4\Service\MailMagazineService;
 
 abstract class AbstractMailMagazineTestCase extends AbstractServiceTestCase
 {
@@ -65,8 +65,6 @@ abstract class AbstractMailMagazineTestCase extends AbstractServiceTestCase
 
     /**
      * Create send mail history
-     *
-     * @param Customer $Customer
      *
      * @return int
      */

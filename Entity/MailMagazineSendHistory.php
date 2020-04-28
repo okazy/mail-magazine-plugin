@@ -13,8 +13,8 @@
 
 namespace Plugin\MailMagazine4\Entity;
 
-use Eccube\Entity\AbstractEntity;
 use Doctrine\ORM\Mapping as ORM;
+use Eccube\Entity\AbstractEntity;
 use Eccube\Entity\Member;
 
 /**

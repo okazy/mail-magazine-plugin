@@ -15,12 +15,12 @@ namespace Plugin\MailMagazine4\Controller;
 
 use Eccube\Controller\AbstractController;
 use Plugin\MailMagazine4\Entity\MailMagazineTemplate;
-use Plugin\MailMagazine4\Repository\MailMagazineTemplateRepository;
-use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Symfony\Component\Routing\Annotation\Route;
 use Plugin\MailMagazine4\Form\Type\MailMagazineTemplateEditType;
+use Plugin\MailMagazine4\Repository\MailMagazineTemplateRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 
 class MailMagazineTemplateController extends AbstractController
 {
@@ -31,8 +31,6 @@ class MailMagazineTemplateController extends AbstractController
 
     /**
      * MailMagazineTemplateController constructor.
-     *
-     * @param MailMagazineTemplateRepository $mailMagazineTemplateRepository
      */
     public function __construct(
         MailMagazineTemplateRepository $mailMagazineTemplateRepository
@@ -64,8 +62,6 @@ class MailMagazineTemplateController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/preview.twig")
      *
-     * @param MailMagazineTemplate $mailMagazineTemplate
-     *
      * @return array
      */
     public function preview(MailMagazineTemplate $mailMagazineTemplate)
@@ -84,8 +80,6 @@ class MailMagazineTemplateController extends AbstractController
      *     name="plugin_mail_magazine_template_delete",
      *     methods={"POST"}
      * )
-     *
-     * @param MailMagazineTemplate $mailMagazineTemplate
      *
      * @return RedirectResponse
      */
@@ -115,8 +109,6 @@ class MailMagazineTemplateController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/template_edit.twig")
      *
-     * @param MailMagazineTemplate $mailMagazineTemplate
-     *
      * @return array
      */
     public function edit(MailMagazineTemplate $mailMagazineTemplate)
@@ -142,7 +134,6 @@ class MailMagazineTemplateController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/template_edit.twig")
      *
-     * @param Request $request
      * @param int $id
      *
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse

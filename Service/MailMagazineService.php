@@ -13,18 +13,18 @@
 
 namespace Plugin\MailMagazine4\Service;
 
-use Eccube\Common\Constant;
-use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
-use Eccube\Repository\BaseInfoRepository;
-use Eccube\Entity\BaseInfo;
-use Eccube\Common\EccubeConfig;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Eccube\Repository\CustomerRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
+use Eccube\Common\Constant;
+use Eccube\Common\EccubeConfig;
+use Eccube\Entity\BaseInfo;
+use Eccube\Repository\BaseInfoRepository;
+use Eccube\Repository\CustomerRepository;
+use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
 use Plugin\MailMagazine4\Repository\MailMagazineSendHistoryRepository;
-use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * メルマガ配信処理のサービスクラス。
@@ -124,14 +124,6 @@ class MailMagazineService
 
     /**
      * MailMagazineService constructor.
-     *
-     * @param \Swift_Mailer $mailer
-     * @param BaseInfoRepository $baseInfoRepository
-     * @param EccubeConfig $eccubeConfig
-     * @param SessionInterface $session
-     * @param CustomerRepository $customerRepository
-     * @param MailMagazineSendHistoryRepository $mailMagazineSendHistoryRepository
-     * @param EntityManagerInterface $entityManager
      *
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException

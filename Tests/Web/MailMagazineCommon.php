@@ -14,11 +14,11 @@
 namespace Plugin\MailMagazine4\Tests\Web;
 
 use Eccube\Common\Constant;
+use Eccube\Repository\MailHistoryRepository;
+use Eccube\Repository\Master\SexRepository;
 use Eccube\Tests\Web\Admin\AbstractAdminWebTestCase;
 use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
 use Plugin\MailMagazine4\Entity\MailMagazineTemplate;
-use Eccube\Repository\Master\SexRepository;
-use Eccube\Repository\MailHistoryRepository;
 
 class MailMagazineCommon extends AbstractAdminWebTestCase
 {

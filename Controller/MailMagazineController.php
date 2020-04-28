@@ -13,24 +13,23 @@
 
 namespace Plugin\MailMagazine4\Controller;
 
-
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Symfony\Component\Routing\Annotation\Route;
-use Eccube\Controller\AbstractController;
-use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
-use Plugin\MailMagazine4\Entity\MailMagazineTemplate;
-use Plugin\MailMagazine4\Service\MailMagazineService;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Eccube\Repository\Master\PageMaxRepository;
-use Eccube\Util\FormUtil;
-use Eccube\Repository\CustomerRepository;
-use Knp\Component\Pager\Paginator;
-use Plugin\MailMagazine4\Form\Type\MailMagazineType;
 use Doctrine\ORM\QueryBuilder;
 use Eccube\Common\Constant;
+use Eccube\Controller\AbstractController;
+use Eccube\Repository\CustomerRepository;
+use Eccube\Repository\Master\PageMaxRepository;
+use Eccube\Util\FormUtil;
+use Knp\Component\Pager\Paginator;
+use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
+use Plugin\MailMagazine4\Entity\MailMagazineTemplate;
+use Plugin\MailMagazine4\Form\Type\MailMagazineType;
 use Plugin\MailMagazine4\Repository\MailMagazineTemplateRepository;
+use Plugin\MailMagazine4\Service\MailMagazineService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class MailMagazineController
@@ -59,11 +58,6 @@ class MailMagazineController extends AbstractController
 
     /**
      * MailMagazineController constructor.
-     *
-     * @param PageMaxRepository $pageMaxRepository
-     * @param CustomerRepository $customerRepository
-     * @param MailMagazineTemplateRepository $magazineTemplateRepository
-     * @param MailMagazineService $mailMagazineService
      */
     public function __construct(
         PageMaxRepository $pageMaxRepository,
@@ -85,8 +79,6 @@ class MailMagazineController extends AbstractController
      * @Route("/%eccube_admin_route%/plugin/mail_magazine/{page_no}", requirements={"page_no" = "\d+"}, name="plugin_mail_magazine_page")
      * @Template("@MailMagazine4/admin/index.twig")
      *
-     * @param Request $request
-     * @param Paginator $paginator
      * @param integer $page_no
      *
      * @return \Symfony\Component\HttpFoundation\Response|array
@@ -182,7 +174,6 @@ class MailMagazineController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/template_select.twig")
      *
-     * @param Request     $request
      * @param string      $id
      *
      * @return \Symfony\Component\HttpFoundation\Response|array
@@ -265,8 +256,6 @@ class MailMagazineController extends AbstractController
      *
      * @Route("/%eccube_admin_route%/plugin/mail_magazine/prepare", name="plugin_mail_magazine_prepare", methods={"POST"})
      *
-     * @param Request     $request
-     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function prepare(Request $request)
@@ -312,8 +301,6 @@ class MailMagazineController extends AbstractController
      *
      * @Route("/%eccube_admin_route%/plugin/mail_magazine/commit", name="plugin_mail_magazine_commit", methods={"POST"})
      *
-     * @param Request $request
-     *
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function commit(Request $request)
@@ -356,8 +343,6 @@ class MailMagazineController extends AbstractController
      * テストメール送信
      *
      * @Route("/%eccube_admin_route%/plugin/mail_magazine/test", name="plugin_mail_magazine_test", methods={"POST"})
-     *
-     * @param Request $request
      *
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */

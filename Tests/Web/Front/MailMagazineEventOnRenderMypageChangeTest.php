@@ -14,8 +14,8 @@
 namespace Plugin\MailMagazine4\Tests\Web\Front;
 
 use Eccube\Common\Constant;
-use Eccube\Tests\Web\AbstractWebTestCase;
 use Eccube\Repository\CustomerRepository;
+use Eccube\Tests\Web\AbstractWebTestCase;
 
 class MailMagazineEventOnRenderMypageChangeTest extends AbstractWebTestCase
 {

@@ -13,13 +13,13 @@
 
 namespace Plugin\MailMagazine4\Form\Extension;
 
-use Eccube\Entity\Customer;
 use Eccube\Common\Constant;
+use Eccube\Entity\Customer;
+use Eccube\Form\Type\Admin\CustomerType;
 use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
-use Eccube\Form\Type\Admin\CustomerType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CustomerMailMagazineTypeExtension extends AbstractTypeExtension
 {

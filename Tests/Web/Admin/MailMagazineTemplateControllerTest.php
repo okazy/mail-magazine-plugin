@@ -13,9 +13,9 @@
 
 namespace Plugin\MailMagazine4\Tests\Web\Admin;
 
-use Plugin\MailMagazine4\Tests\Web\MailMagazineCommon;
 use Eccube\Repository\MailTemplateRepository;
 use Plugin\MailMagazine4\Repository\MailMagazineTemplateRepository;
+use Plugin\MailMagazine4\Tests\Web\MailMagazineCommon;
 
 class MailMagazineTemplateControllerTest extends MailMagazineCommon
 {

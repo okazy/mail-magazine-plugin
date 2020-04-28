@@ -18,9 +18,9 @@
 namespace Plugin\MailMagazine4\Form\Type;
 
 use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class MailMagazineTemplateType extends AbstractType
 {

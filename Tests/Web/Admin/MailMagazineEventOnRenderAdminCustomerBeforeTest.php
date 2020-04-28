@@ -14,8 +14,8 @@
 namespace Plugin\MailMagazine4\Tests\Web\Admin;
 
 use Eccube\Common\Constant;
-use Plugin\MailMagazine4\Tests\Web\MailMagazineCommon;
 use Eccube\Repository\CustomerRepository;
+use Plugin\MailMagazine4\Tests\Web\MailMagazineCommon;
 
 class MailMagazineEventOnRenderAdminCustomerBeforeTest extends MailMagazineCommon
 {

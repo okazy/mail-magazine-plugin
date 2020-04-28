@@ -13,9 +13,9 @@
 
 namespace Plugin\MailMagazine4\Repository;
 
-use Eccube\Repository\AbstractRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Doctrine\ORM\Query;
+use Eccube\Repository\AbstractRepository;
 use Plugin\MailMagazine4\Entity\MailMagazineTemplate;
 
 /**
@@ -29,7 +29,6 @@ class MailMagazineTemplateRepository extends AbstractRepository
     /**
      * MailMagazineTemplateRepository constructor.
      *
-     * @param \Doctrine\Common\Persistence\ManagerRegistry $registry
      * @param string $entityClass
      */
     public function __construct(ManagerRegistry $registry, $entityClass = MailMagazineTemplate::class)

@@ -13,10 +13,10 @@
 
 namespace Plugin\MailMagazine4\Repository;
 
-use Eccube\Repository\AbstractRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
-use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
 use Eccube\Doctrine\Query\Queries;
+use Eccube\Repository\AbstractRepository;
+use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
 
 /**
  * SendHistoryRepository.
@@ -31,8 +31,6 @@ class MailMagazineSendHistoryRepository extends AbstractRepository
     /**
      * MailMagazineSendHistoryRepository constructor.
      *
-     * @param Queries $queries
-     * @param ManagerRegistry $registry
      * @param string $entityClass
      */
     public function __construct(

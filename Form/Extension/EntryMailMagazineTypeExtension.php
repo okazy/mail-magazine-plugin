@@ -14,12 +14,12 @@
 namespace Plugin\MailMagazine4\Form\Extension;
 
 use Eccube\Entity\Customer;
-use Symfony\Component\Form\AbstractTypeExtension;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Eccube\Form\Type\Front\EntryType;
+use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class EntryMailMagazineTypeExtension extends AbstractTypeExtension
 {
@@ -30,8 +30,6 @@ class EntryMailMagazineTypeExtension extends AbstractTypeExtension
 
     /**
      * EntryMailMagazineTypeExtension constructor.
-     *
-     * @param TokenStorageInterface $tokenStorage
      */
     public function __construct(TokenStorageInterface $tokenStorage)
     {
@@ -40,9 +38,6 @@ class EntryMailMagazineTypeExtension extends AbstractTypeExtension
 
     /**
      * {@inheritdoc}
-     *
-     * @param FormBuilderInterface $builder
-     * @param array $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

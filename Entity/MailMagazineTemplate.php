@@ -13,12 +13,11 @@
 
 namespace Plugin\MailMagazine4\Entity;
 
-use Eccube\Entity\AbstractEntity;
 use Doctrine\ORM\Mapping as ORM;
+use Eccube\Entity\AbstractEntity;
 
 /**
  * Class MailMagazineTemplate
- *
  *
  * @ORM\Table(name="plg_mailmaga_template")
  * @ORM\Entity(repositoryClass="Plugin\MailMagazine4\Repository\MailMagazineTemplateRepository")

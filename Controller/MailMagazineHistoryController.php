@@ -14,16 +14,16 @@
 namespace Plugin\MailMagazine4\Controller;
 
 use Eccube\Controller\AbstractController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Symfony\Component\Routing\Annotation\Route;
+use Eccube\Entity\Master\Sex;
+use Eccube\Repository\Master\PageMaxRepository;
 use Knp\Component\Pager\Paginator;
 use Plugin\MailMagazine4\Entity\MailMagazineSendHistory;
 use Plugin\MailMagazine4\Repository\MailMagazineSendHistoryRepository;
 use Plugin\MailMagazine4\Service\MailMagazineService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Eccube\Repository\Master\PageMaxRepository;
-use Eccube\Entity\Master\Sex;
+use Symfony\Component\Routing\Annotation\Route;
 
 class MailMagazineHistoryController extends AbstractController
 {
@@ -44,10 +44,6 @@ class MailMagazineHistoryController extends AbstractController
 
     /**
      * MailMagazineHistoryController constructor.
-     *
-     * @param MailMagazineService $mailMagazineService
-     * @param MailMagazineSendHistoryRepository $mailMagazineSendHistoryRepository
-     * @param PageMaxRepository $pageMaxRepository
      */
     public function __construct(
         MailMagazineService $mailMagazineService,
@@ -69,8 +65,6 @@ class MailMagazineHistoryController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/history_list.twig")
      *
-     * @param Request $request
-     * @param Paginator $paginator
      * @param int $page_no
      *
      * @return array
@@ -118,8 +112,6 @@ class MailMagazineHistoryController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/history_preview.twig")
      *
-     * @param MailMagazineSendHistory $mailMagazineSendHistory
-     *
      * @return array
      */
     public function preview(MailMagazineSendHistory $mailMagazineSendHistory)
@@ -138,8 +130,6 @@ class MailMagazineHistoryController extends AbstractController
      *      name="plugin_mail_magazine_history_condition",
      * )
      * @Template("@MailMagazine4/admin/history_condition.twig")
-     *
-     * @param MailMagazineSendHistory $mailMagazineSendHistory
      *
      * @throws BadRequestHttpException
      *
@@ -204,8 +194,6 @@ class MailMagazineHistoryController extends AbstractController
      *     methods={"POST"}
      * )
      *
-     * @param MailMagazineSendHistory $mailMagazineSendHistory
-     *
      * @throws BadRequestHttpException
      *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
@@ -234,9 +222,6 @@ class MailMagazineHistoryController extends AbstractController
      *     name="plugin_mail_magazine_history_retry",
      *     methods={"POST"}
      * )
-     *
-     * @param Request $request
-     * @param MailMagazineSendHistory $mailMagazineSendHistory
      *
      * @return mixed
      */
@@ -274,9 +259,6 @@ class MailMagazineHistoryController extends AbstractController
      * )
      * @Template("@MailMagazine4/admin/history_result.twig")
      *
-     * @param Request $request
-     * @param MailMagazineSendHistory $mailMagazineSendHistory
-     * @param Paginator $paginator
      * @param int $page_no
      *
      * @return mixed

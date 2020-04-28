@@ -14,8 +14,8 @@
 namespace Plugin\MailMagazine4\Event;
 
 use Knp\Component\Pager\Event\ItemsEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Plugin\MailMagazine4\Service\MailMagazineService;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class MailMagazineHistoryFilePaginationSubscriber implements EventSubscriberInterface
 {
@@ -26,8 +26,6 @@ class MailMagazineHistoryFilePaginationSubscriber implements EventSubscriberInte
 
     /**
      * MailMagazineHistoryFilePaginationSubscriber constructor.
-     *
-     * @param MailMagazineService $mailMagazineService
      */
     public function __construct(MailMagazineService $mailMagazineService)
     {
